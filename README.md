@@ -1,2 +1,107 @@
-# PID-controlled-Single-axis-solar-tracking-system-
-A single axis solar tracking system that moves towards the direction of sunlight based on the variance in intensity from LDR sensors
+# PID Controlled Single Axis Solar Tracker
+
+## 📖 Introduction
+
+This project is a **PID-controlled single axis solar tracker** designed
+to increase solar panel efficiency by automatically adjusting its
+orientation to follow the sun's position throughout the day. Unlike
+static panels, the tracker uses **feedback control** to continuously
+optimize the panel's angle, ensuring maximum sunlight capture.
+
+The system applies a **PID (Proportional-Integral-Derivative)
+algorithm** for smooth and stable motion, preventing unnecessary
+oscillations and extending the lifespan of the mechanical components.
+
+------------------------------------------------------------------------
+
+## 🔎 Project Overview
+
+-   The tracker uses **light-dependent resistors (LDRs)** as sensors to
+    detect sunlight intensity on different sides of the panel.
+-   A **servo/DC motor** is controlled by an **Arduino/ESP32 (depending
+    on your build)** to rotate the panel along one axis (East--West).
+-   The **PID algorithm** ensures precise angular positioning by
+    minimizing error between left and right LDR readings.
+-   Designed for **renewable energy optimization** and as a **practical
+    implementation of control systems in mechatronics**.
+
+------------------------------------------------------------------------
+
+## 🌟 Key Features
+
+-   ✅ **PID feedback control** for smooth tracking and reduced
+    oscillations.
+-   ✅ **Single-axis movement** (East--West tracking).
+-   ✅ **Real-time sunlight intensity sensing** with LDRs.
+-   ✅ **Increased energy efficiency** compared to static panels.
+-   ✅ **Low-cost design** using off-the-shelf components.
+-   ✅ **Educational demonstration** of PID tuning and renewable energy
+    systems.
+
+------------------------------------------------------------------------
+
+## ⚙️ How It Works
+
+1.  **Sensors:** Two LDRs are placed at different positions on the
+    panel. They measure sunlight intensity.
+2.  **Error Calculation:** The system computes the difference between
+    the two LDR values (left vs. right).
+3.  **PID Control:**
+    -   *Proportional* adjusts based on immediate error.
+    -   *Integral* corrects accumulated offset.
+    -   *Derivative* stabilizes the response by damping sudden changes.
+4.  **Actuator Control:** The calculated PID output drives a servo/DC
+    motor, rotating the panel until the error approaches zero (balanced
+    light on both LDRs).
+5.  **Tracking:** The panel keeps adjusting throughout the day,
+    following the sun across its path.
+
+------------------------------------------------------------------------
+
+## 🛠️ Components Used
+
+  -----------------------------------------------------------------------
+  Component            Description         Function
+  -------------------- ------------------- ------------------------------
+  Solar Panel ||Small-scale photovoltaic panel ||Converts sunlight to  electricity.
+
+  Arduino nano ||Microcontroller board ||Runs PID algorithm and controls motor.
+
+  LDR Sensors (x2) ||Light dependent resistors ||Detect sunlight intensity on  each side.
+
+  Servo/DC Motor ||Actuator ||Rotates the solar panel along one axis.
+
+  Motor Driver (if DC  motor motor used) ||H-bridge driver (e.g., L298N) ||Enables bidirectional control.
+
+  Resistors ||Various ||Voltage divider for LDR sensing.
+
+  Power Supply ||Battery/regulated DC source ||Powers the system.
+
+  Mounting Frame ||Mechanical structure ||Holds and rotates the solar panel.
+  -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## 🧩 Applications
+
+-   Renewable energy systems for **maximizing solar efficiency**.
+-   Educational demonstration of **control theory (PID)**.
+-   Basis for **multi-axis solar trackers**.
+-   Practical mechatronics project combining **sensors, actuators, and
+    control algorithms**.
+
+------------------------------------------------------------------------
+
+## 🚀 Future Improvements
+
+-   Extend to **dual-axis tracking** (East--West + North--South).
+-   Integrate **MPPT (Maximum Power Point Tracking)** for real-time
+    power optimization.
+-   Add **IoT connectivity** for data logging and remote monitoring.
+-   Implement **weather detection** to prevent tracking during cloudy or
+    stormy conditions.
+
+
+Built by **T_ARCH**, Mechatronics Engineering Student.
+📌 [LinkedIn Profile]: www.linkedin.com/in/teslim-oladepo1
+📌 [GitHub Profile](): https://github.com/teslimo
